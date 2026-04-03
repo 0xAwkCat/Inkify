@@ -1,0 +1,324 @@
+.markdown-body h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ink);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-mid);
+  margin-bottom: 2rem;
+}
+
+.markdown-body h2 {
+  font-family: 'DM Sans', 'LXGW WenKai Screen', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  text-decoration: underline wavy var(--accent-light);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1.5px;
+}
+
+.markdown-body h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body p {
+  font-family: 'DM Sans', 'LXGW WenKai Screen', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.markdown-body ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.markdown-body ul li {
+  position: relative;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.9;
+  padding-left: 1rem;
+}
+
+.markdown-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-light);
+}
+
+/* 任务列表：含 checkbox 的 li 隐藏自定义圆点 */
+.markdown-body ul li:has(> input[type="checkbox"])::before {
+  display: none;
+}
+
+.markdown-body ul li:has(> input[type="checkbox"]) {
+  padding-left: 0.25rem;
+}
+
+.markdown-body input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--border-mid);
+  border-radius: 3px;
+  background: var(--cream);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -1px;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.markdown-body input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.markdown-body input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 1.5px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+/* kbd 键盘标签 */
+.markdown-body kbd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8em;
+  padding: 0.1em 0.45em;
+  background: var(--cream-dark);
+  border: 1px solid var(--border-mid);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+/* mark 高亮 */
+.markdown-body mark {
+  background: rgba(139, 94, 60, 0.15);
+  color: var(--ink);
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
+/* 删除线 */
+.markdown-body del {
+  color: var(--ink-soft);
+  text-decoration-color: var(--accent-light);
+}
+
+.markdown-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.markdown-body ol li {
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.9;
+  padding-left: 0.3rem;
+}
+
+.markdown-body ol li::marker {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.markdown-body strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.markdown-body em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--cream-dark);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.markdown-body blockquote p {
+  margin-bottom: 0;
+}
+
+.markdown-body code {
+  background: var(--cream-dark);
+  color: var(--accent);
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+}
+
+.markdown-body pre {
+  background: var(--cream-darker);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.markdown-body pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1.2rem 1.5rem;
+  background: none;
+  color: inherit;
+  font-size: 0.88rem;
+  border-radius: 0;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 1rem 0.45rem 1.2rem;
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--border-mid);
+}
+
+.code-lang {
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+
+.copy-btn {
+  font-family: 'DM Sans', 'LXGW WenKai Screen', sans-serif;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  background: none;
+  border: 1px solid var(--border-mid);
+  border-radius: 3px;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.copy-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent-light);
+}
+
+
+.markdown-body a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.markdown-body thead th {
+  background: var(--cream-dark);
+  color: var(--ink);
+  font-weight: 500;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border-mid);
+}
+
+.markdown-body tbody td {
+  padding: 0.55rem 1rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 4px;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* 图片紧跟的斜体作为图注 */
+.markdown-body img + em,
+.markdown-body img + br + em {
+  display: block;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: normal;
+  margin-top: -0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 图片链接去掉下划线 */
+.markdown-body a:has(> img) {
+  display: block;
+  text-decoration: none;
+}
+
+.markdown-body a:has(> img):hover img {
+  opacity: 0.88;
+  transition: opacity 0.2s;
+}
+
+/* KaTeX 块级公式居中，允许横向滚动，不裁剪 */
+.markdown-body .katex-display {
+  display: block;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0.25rem 0;
+}
+
+/* 确保块级公式内部不被截断 */
+.markdown-body .katex-display > .katex {
+  white-space: nowrap;
+}
+
+/* KaTeX 行内公式颜色跟随正文 */
+.markdown-body .katex {
+  font-size: 1em;
+  color: var(--ink);
+}

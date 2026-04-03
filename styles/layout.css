@@ -1,0 +1,48 @@
+/* 侧边栏 */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--cream-dark);
+  border-right: 1px solid var(--border-mid);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0 2rem;
+  overflow-y: auto;
+}
+
+/* 主内容区 */
+#main {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  padding: 4rem 4rem 6rem;
+}
+
+#content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.loading-hint {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--border-mid);
+    padding: 1.5rem 0 1rem;
+  }
+
+  #main {
+    margin-left: 0;
+    padding: 2rem 1.5rem 4rem;
+  }
+}

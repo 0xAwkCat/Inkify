@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教案展示</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- 霞鹜文楷 Screen（中文正文字体） -->
+  <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/tomorrow.min.css">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/markdown.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+  <nav id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-text">教案</span>
+    </div>
+    <div id="sidebar-nav"></div>
+  </nav>
+
+  <main id="main">
+    <article id="content" class="markdown-body">
+      <p class="loading-hint">加载中…</p>
+    </article>
+  </main>
+
+  <!-- marked.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <!-- highlight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <!-- KaTeX -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="scripts/fetcher.js"></script>
+  <script src="scripts/sidebar.js"></script>
+  <script src="scripts/renderer.js"></script>
+  <script src="scripts/router.js"></script>
+</body>
+</html>

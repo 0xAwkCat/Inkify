@@ -1,0 +1,32 @@
+:root {
+  --cream:        #F5F3EE;
+  --cream-dark:   #EDEAE3;
+  --cream-darker: #E2DED6;
+  --ink:          #1C1917;
+  --ink-mid:      #514B44;
+  --ink-soft:     #968E84;
+  --accent:       #7A6A5A;
+  --accent-light: #A89888;
+  --border:       rgba(60, 50, 40, 0.10);
+  --border-mid:   rgba(60, 50, 40, 0.18);
+  --sidebar-w:    240px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', 'LXGW WenKai Screen', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
