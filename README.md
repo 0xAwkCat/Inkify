@@ -1,11 +1,10 @@
 # Inkify
 
+**English** · [中文](./README.zh.md)
+
 > A minimal, Docsify-inspired Markdown site template with a warm cream design system. Edit `.md` files — the site updates automatically.
 
-**[Live Demo →](#)** <!-- 部署后替换为你的 GitHub Pages 链接 -->
-
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-success)
 
 ---
 
@@ -17,7 +16,6 @@
 - **Syntax highlighting** — highlight.js with language labels and copy button
 - **Warm design system** — cream palette with CSS variables, easy to retheme
 - **Chinese-friendly** — LXGW WenKai Screen font, proper CJK rendering
-- **GitHub Pages ready** — includes `.nojekyll`, works out of the box
 
 ## Quick Start
 
@@ -28,15 +26,15 @@ Click **"Use this template"** on GitHub to create your own repo, then:
 1. Edit `_sidebar.md` to set up navigation
 2. Replace `home.md` with your homepage content
 3. Add your `.md` files to `docs/`
-4. Push → GitHub Pages serves it automatically
+4. Push to any static hosting platform
 
 ### Run Locally
 
 ```bash
-# Any static file server works
+# Python
 python -m http.server 8080
 
-# Or with Node.js
+# Or Node.js
 npx serve .
 ```
 
@@ -49,7 +47,7 @@ inkify/
 ├── index.html          # Entry point — loads all scripts and styles
 ├── home.md             # Site homepage (edit this)
 ├── _sidebar.md         # Navigation (edit this)
-├── .nojekyll           # Required for GitHub Pages
+├── .nojekyll
 ├── styles/
 │   ├── base.css        # CSS variables + reset (start here to retheme)
 │   ├── layout.css      # Sidebar + content area layout
@@ -102,15 +100,7 @@ Edit `_sidebar.md`:
 - [Page Title](docs/filename)
 ```
 
-File names in `docs/` should be ASCII (URL encoding issues with CJK filenames).
-
-## Deploy to GitHub Pages
-
-1. Push your repo to GitHub
-2. Go to **Settings → Pages → Source**: select `main` branch, root directory
-3. Save — your site will be live at `https://username.github.io/repo-name`
-
-The `.nojekyll` file ensures GitHub Pages serves all files without Jekyll processing.
+File names in `docs/` should be ASCII to avoid URL encoding issues with CJK filenames.
 
 ## Browser Support
 
